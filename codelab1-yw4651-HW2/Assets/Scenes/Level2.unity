@@ -618,7 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorA: {r: 0.91764706, g: 0.98039216, b: 0.6862745, a: 1}
   colorB: {r: 0.7490196, g: 0.6627451, b: 0.9647059, a: 1}
-  timeTochange: 1
+  timeTochange: 0.9
 --- !u!114 &883567412
 MonoBehaviour:
   m_ObjectHideFlags: 0
