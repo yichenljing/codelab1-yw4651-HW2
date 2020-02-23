@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PrizeScript : MonoBehaviour
 {
     public Color colorA;
     public Color colorB;
-   
- 
+
+    public Text ScoreText;
 
     public static int currentLevel = 0;
     public int targetScore;
@@ -23,7 +23,7 @@ public class PrizeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        ScoreText.text =PlayerController.instance.score.ToString("0");
     }
 
     private void OnCollisionEnter2D(Collision2D collision) //If another GameObject with a 2D Collider on it hits this GameObject's collider
