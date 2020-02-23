@@ -5,7 +5,26 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float force = 5;
+
+    public int score = 0;
     Rigidbody2D rb;
+    public static PlayerController instance; //this static var will hold the Singleton
+
+    private void Awake()
+    {
+        if (instance == null) //instance hasn't been set yet
+        {
+            instance = this; // set instance to this object
+
+            DontDestroyOnLoad(gameObject); //Dont Destroy this object when you load a new scene
+
+        }
+        else
+        { Destroy(gameObject); } // destroy this new object, so there is only one
+    }
+
+
+
     // Start is called before the first frame update
     void Start()  //setup
     {
