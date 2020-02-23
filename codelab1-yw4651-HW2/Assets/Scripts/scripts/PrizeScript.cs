@@ -17,13 +17,13 @@ public class PrizeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targetScore = PlayerController.instance.score * 2 + 5; //increase the target score every level
+        targetScore = PlayerController.instance.score * 2 + 2; //increase the target score every level
     }
 
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text =PlayerController.instance.score.ToString("0");
+        ScoreText.text =PlayerController.instance.score.ToString("0");  //show current scores
     }
 
     private void OnCollisionEnter2D(Collision2D collision) //If another GameObject with a 2D Collider on it hits this GameObject's collider
